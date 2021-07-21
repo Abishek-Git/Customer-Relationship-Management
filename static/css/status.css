@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+
+.containerr .first3{
+    display: grid;
+    padding: 60px;
+    grid-gap: 80px;
+    overflow: hidden;
+    /* background-color:  rgba(36, 37, 38, 0.2); */
+}
+
+
+@media screen and (min-width: 380px) {
+    .containerr .first3{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .containerr .first3{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .containerr .first3{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .containerr .first3{
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+
+
+.containerr .first3 .box1, .box2, .box3{
+    color: blue;
+   padding: 10px 70px 50px 70px;
+   box-shadow: rgba(36, 37, 38, 0.5) 0px 6px 15px 0px;
+   border-radius: 5px; 
+   color: antiquewhite;
+   font-family: 'Goblin One', cursive;
+   font-size: 1.5rem;
+   text-align: center;
+}
+
+
+.containerr .first3 .box1{
+    background: linear-gradient(45deg,#ff537079,#ff869aaf);
+}
+
+.containerr .first3 .box2{
+background: linear-gradient(45deg,#4099ff8c,#73b4ffb2);
+}
+
+.containerr .first3 .box3{
+    background: linear-gradient(45deg,#2ed8b667,#59e0c5a6)  
+}
+
+
+
+.containerr .first3 .head1, .head2,.head3{
+    margin-top: 70px;
+}

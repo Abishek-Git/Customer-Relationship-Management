@@ -1,0 +1,83 @@
+
+{% load static%}
+
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!Doctype html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>LOG IN</title>
+     	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ <div class="container">
+ <!---heading---->
+     <header class="heading">LOG IN</header><hr></hr>
+	<!---Form starting---->
+    <form action="" method="post">
+        {%      csrf_token      %}
+
+	<div class="row ">
+	 <!--- For Name---->
+         <div class="col-sm-12">
+            <div class="row">
+			    <div class="col-xs-4">
+          	         <label class="firstname">User Name :</label> </div>
+		       		<div class="col-xs-8">
+		             <input type="text" value="" name="username" id="fname" placeholder="Enter your First Name" class="form-control ">
+            		 </div>
+		      	</div>
+			</div>
+		 
+          <div class="col-sm-12">
+			  
+		         <div class="row">
+					
+				     <div class="col-xs-4">
+						<p></p>
+						<p></p>
+
+		 	              <label class="pass">Password :</label></div>
+				  <div class="col-xs-8">
+					<p></p>
+					<p></p>
+			             <input type="password" value="" name="password" id="password" placeholder="Enter your Password" class="form-control">
+				 </div>
+          </div>
+
+			   
+		     <div class="col-sm-12"><p></p>
+				<p></p>
+				 {% for message in messages%}
+
+				 {{message}}
+
+				 {%	endfor %}
+				<p></p>
+				<p></p>
+				<p><a href="{%	url 'register'	%}"> Dont have account, Register </a></p>
+
+                <p></p>
+				<p><a href="{%	url 'password_reset'	%}">Reset password</a></p>
+                <p></p>
+                <p></p>
+				<input class="btn btn-warning" type="submit" value="Submit">
+				 <p></p>
+				 <p></p>
+		   </div>
+		 </div>
+	 </div>	 
+    </form>	 
+		 
+</div>
+
+</body>		
+</html>
+	 
+	 

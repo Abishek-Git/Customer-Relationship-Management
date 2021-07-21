@@ -1,0 +1,84 @@
+{% extends 'MiniMart/Home.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/dashboard.css' %}">
+   
+{% include "MiniMart/status.html" %}
+
+
+
+<div class="box6">
+
+        
+    <div class="seconf-tab"></div>
+    <table class="second">
+        <tr class="table-primary-table">
+            <th></th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Mail</th>
+        </tr>
+        {%  for obj in customers  %}
+        <tr class="data-tab">
+            <td class="large-btn"><a class="btn btn-sm btn-info" href="{% url 'about' obj.id %}">View</a></td>
+            <td>{{obj.name}}</td>
+            <td>{{obj.phone}}</td>
+            <td>{{obj.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    </div> 
+
+    <div class="set-head">
+    <form action="" method="GET">
+
+        {{FilterFormSet.form.Customer.label}}
+        {{FilterFormSet.form.Customer}}
+
+        {{FilterFormSet.form.Product.label}}
+        {{FilterFormSet.form.Product}}
+
+        {{FilterFormSet.form.status.label}}
+        {{FilterFormSet.form.status}}
+
+        {{FilterFormSet.form.start_date}}
+        {{FilterFormSet.form.end_date}}
+       
+    <input class="btn btn-outline-success " type="submit" value="Submit">
+
+    </form>
+</div >
+
+    <table >
+            <tr class="tab-border">
+                <th class="tab-head6"></th>
+                <th class="tab-head1">Customer</th>
+                <th class="tab-head2">Product</th>
+                <th class="tab-head3">Date ordered</th>
+                <th class="tab-head4">Status</th>
+                <th class="tab-head5">Action</th>
+            </tr>
+            {%  for obj in details  %}
+            <tr>
+                <td><a class="btn btn-sm btn-info" href="{% url 'about' obj.Customer.id %}">view</a></td>
+                
+                <td class="name">{{obj.Customer.name}}</td>
+                <td>{{obj.Product.name}}</td>
+                <td>{{obj.date_created}}</td>
+                <td>{{obj.status}}</td>
+                <td><label for="cars">Order</label>
+                    <select name="cars" id="cars">
+                        <option value="delete">delete</option>
+                        <option value="delivered">delivered</option>
+                        <option value="pending">pending</option>
+                        <option value="Return">Return</option>
+                      </select></td>
+            <tr>
+                {% endfor %}
+        </table>
+
+
+</div>
+
+{% endblock %}

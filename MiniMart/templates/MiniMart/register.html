@@ -1,0 +1,83 @@
+
+{% load static%}
+
+
+
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="first">
+ <div class="container">
+ <!---heading---->
+     <header class="heading"> Register</header><hr></hr>
+	<!---Form starting---->
+    <form action="" method="POST">
+        {%      csrf_token      %}
+
+	<div class="row ">
+	 <!--- For Name---->
+         <div class="col-sm-12">
+             <div class="row">
+			     <div class="col-xs-4">
+          	         <label class="firstname">User Name :</label> </div>
+		         <div class="col-xs-8">
+                    {{Registerform.username}}
+                </div>
+		      </div>
+		 </div>
+
+		 <div class="col-sm-12">
+		     <div class="row">
+
+			     <div class="col-xs-4">
+		             <label class="mail" >Email :</label></div>
+			     <div class="col-xs-8"	>	 
+                     <p></p>
+                    {{Registerform.email}}
+                </div>
+		     </div>
+		 </div>
+          <div class="col-sm-12">
+		         <div class="row">
+				     <div class="col-xs-4">
+                         
+		 	              <label class="pass">Password :</label></div>
+				  <div class="col-xs-8">
+                    <p></p>
+                    {{Registerform.password1}}
+                </div>
+          </div>
+
+          <div class="row">
+              <p></p>
+            <div class="col-xs-4">
+                  <label class="pass">Confirm Password:</label></div>
+         <div class="col-xs-8">
+             <p></p>
+            {{Registerform.password2}}
+
+        </div>
+ </div>
+
+		  </div>
+
+		     <div class="col-sm-12">
+
+               <p style="color: white;">{{Registerform.errors}}</p>
+                <p><a href="{%	url 'login'	%}"> Have an account, LogIn </a></p>
+		         <input class="btn btn-warning" type="submit" value="submit" >
+		  
+                </div>
+            </div>
+	 </div>	 
+    </form>	 
+		 
+</div>
+
+</div>
+	 
+	 

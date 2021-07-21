@@ -1,0 +1,44 @@
+{%      extends 'MiniMart/Home.html'        %}
+{%  load static     %}
+{%      block content       %}
+
+<style>
+    .form-update input[type="text"]{
+        width: 210px !important;
+        height: 35px !important;
+        border: rgba(131, 122, 122, 0.651) solid 1px;
+        color: black;
+
+    }
+
+    .form-update input[type="email"]{
+        width: 210px !important;
+        height: 35px !important;
+        border: rgba(131, 122, 122, 0.651) solid 1px;
+
+    }
+    .form-update{
+        padding: 20px 0;
+    }
+   
+
+
+</style>
+<div class="container-md">
+    <div class="card col-4 bg-secondary">
+        <div class="card-body bg-light">
+            <div class="card-header bg-primary"><strong>Edit Profile</strong></div>
+        <form class="form-update" action="" enctype="multipart/form-data" method="POST">
+            {%  csrf_token  %}
+            {{update_form.as_p}}
+
+            <input class="btn btn-lg btn-success" type="submit" value="update">
+        </form>
+    </div>
+    </div>
+</div>
+
+{%      endblock        %}
+
+
+

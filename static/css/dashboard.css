@@ -1,0 +1,88 @@
+
+
+.box6{
+    color: rgb(2, 2, 2);
+    background-color:  rgba(36, 37, 38, 0.2);
+    padding: 20px 30px !important ;
+ 
+}
+
+table , .table-responsive-md{
+    /* text-align:start; */
+    box-shadow: rgba(36, 37, 38, 0.5) 0px 6px 15px 0px;
+    background: white;
+    width: 100%;
+    border-radius: 10px;
+ 
+}
+
+
+
+table .tab-border th, .table-primary-table {
+    
+    background: rgba(16, 16, 221, 0.87);
+    padding: 10px 7px !important;
+}
+
+table td{
+    padding: 7px;
+    margin-top: 2px;
+    border-top: rgba(36, 37, 38, 0.3) solid 1px;
+
+}
+
+.tab-head5{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+
+}
+
+.tab-head6{
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px;
+}
+
+.second{
+    width: 100%;
+    margin-top: 20px !important;
+
+
+
+}
+
+.seconf-tab{
+    border-radius: 10px;
+    align-self: center;
+}
+
+.second th, table .data-tab td{
+    color: black !important;
+}
+
+.large-btn{
+    width: 10% !important;
+}
+
+.table-primary-table{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.table-primary-table th{
+    padding: 10px 7px;
+}
+
+.set-head{
+    display: inline !important;
+}
+
+.set1{
+    display: inline-block !important;
+    max-width: 200px !important;
+}
+
+.set-head .set-bar input[text]{
+    max-width: 80px !important;
+    max-height: 30px !important;
+}

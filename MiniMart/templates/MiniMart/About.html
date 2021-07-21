@@ -1,0 +1,76 @@
+{% extends 'MiniMart/Home.html' %}
+{% load static%}
+
+
+
+{% block content %}
+
+{%  include "MiniMart/status.html"    %}
+
+<link rel="stylesheet" href="{% static 'css/about1.css' %}">
+
+<div id="total">
+
+<div class="last2">
+    <div class="box5">
+            <p class="details">Deatils</p>
+            <div class="info-name">Name: <span class="spanny">{{customer.name}}</span></div>
+            <div class="info-email">Email: <span class="spanny">{{customer.email}}</span></div>
+            <div class="info-num">Mobile: <span class="spanny">{{customer.phone}}</span></div>
+    </div>
+
+    <div class="update-del">
+
+        {% if request.user.is_authenticated and not request.user.is_staff and not request.user.is_Admin %}
+        <div class="update"><a style="color: white;" href="{% url 'profile'  %}"> Update Customer</a></div>
+        {%  endif   %}
+
+        {% if request.user.is_authenticated and  request.user.is_staff or request.user.is_Admin %}
+        <div class="delete"><a style="color: white;" href="{% url 'denied'  %}"> Delete Customer</a></div>
+        {%  endif   %}
+
+    </div>
+
+    <div class="box6">
+
+        {%   if request.user.is_staff or request.user.is_Admin   %}
+        <div class="ord-create" ><a href="{% url 'create_order' customer.id  %}"> Create-Order</a></div>
+        {%  endif   %}
+
+        <table >  
+            <tr class="tab-border">         
+                <th class="tab-head1">Product</th>
+                <th class="tab-head2">Category</th>
+                <th class="tab-head2">Date ordered</th>
+                <th class="tab-head3">Status</th>
+
+                {%   if request.user.is_staff or request.user.is_Admin   %}
+                <th class="tab-head3">Update</th>
+                <th class="tab-head4">Delete</th>
+                {%  endif   %}
+
+            </tr>
+            {%   for ord in order   %}
+            <tr>
+                <td>{{ord.Product.name}}</td>
+                <td>{{ord.Product.category}}</td>
+                <td>{{ord.date_created}}</td>
+                <td>{{ord.status}}</td>
+
+                {%   if request.user.is_staff or request.user.is_Admin   %}
+                <td><a class = "btn btn-warning" href="{% url 'update_order' ord.id  %}">Update</a></td>
+                <td><a class = "btn btn-danger" href="{% url 'delete_order' ord.id  %}">Delete</a></td>
+                {%  endif   %}
+
+            <tr>
+                {%   endfor   %}
+        </table>
+    </div> 
+</div> 
+</div>
+
+ 
+{% endblock  %}
+
+
+

@@ -1,0 +1,24 @@
+{%    extends 'MiniMart/home.html'     %}
+
+{%  block content%}
+
+<div class="card">
+<div class="badge"><p1> item for  {{customer.name}}</p1></div>
+<form action="" method="POST">
+        {% csrf_token %}
+        {{   OrderSetForm.management_form}}
+        {%  for order in OrderSetForm  %}
+
+        {{order}}
+        <hr>
+        
+        {%     endfor   %}
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+
+</div>
+
+{%     endblock    %}

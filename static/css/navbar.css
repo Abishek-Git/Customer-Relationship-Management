@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+
+#logo{
+    color: antiquewhite;
+    font-family: 'Goblin One', cursive;
+    font: 15px
+}
+
+
+
+.container1{
+    display: grid !important;
+    border: blue solid 1px ;
+    background-color: #222;
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .container1 .navbar .first4{
+        /* display: grid; */
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .container1 .navbar .first4{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container1 .navbar .first4{
+        grid-template-columns: repeat(4,1fr)
+    }
+}
+
+.container1 .navbar .first4 a{
+    color: antiquewhite;
+    padding: 0 15px;
+}
+
+.container1 .navbar .first4 a:hover{
+    color: blue;
+}
+
+.first4{
+    width: 60%;
+
+}
+
+    
+
+.search-btn{
+    /* display: inline-block; */
+    position: relative;
+    margin-top: 10px;
+    
+}
+
+.container1 .search-btn input{
+    width: 140px;
+    height: 40px;
+    border: #e98d32ce 1px solid;
+    
+
+}
+
+.container1 .search-btn input:active{
+    transition-duration: 2s;
+    
+
+}
+
+.container1 .search-btn .but{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    margin-top: 1px;
+    background-color: #ff8d1e;
+    border: #726e6b 1px solid;
+}
+
+.container1 .search-btn .but:hover{
+    color: black;
+    border: greenyellow;
+    background-color: #ff1985;
+}
+
+
+
+
+
+
+/*  */
+/*  */
+/*  */
+

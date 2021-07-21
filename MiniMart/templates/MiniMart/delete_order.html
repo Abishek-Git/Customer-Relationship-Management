@@ -1,0 +1,19 @@
+{%   extends 'MiniMart/home.html'   %}
+
+{%  block content  %}
+
+
+<form action="" method="POST">
+    {%   csrf_token   %}
+    {{delete_form}}
+
+    <p>Are you sure want to delete this Order - {{order.name}}</p>
+
+    <button  class="btn-warning" type="submit"></button>
+
+    <button  class="btn-danger" type="submit"></button>
+
+</form>
+
+
+{%  endblock    %}

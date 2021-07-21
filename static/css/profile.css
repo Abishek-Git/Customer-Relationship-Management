@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+.frame{
+    border: 0;
+    margin: 10px;
+    /* background: grey; */
+}
+
+.total-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+
+
+    
+}
+
+.frame .total-container >div{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px 2px rgba(54, 53, 53, 0.685) ;
+}
+
+.frame .total-container .back-box{
+
+    /* font-size: 1.1rem; */
+    grid-column: 1/4;
+    grid-row: 1/2;
+    position: relative;
+    left: 0;
+    justify-self: end;
+    border-radius: 5px;
+    text-align:center;
+    text-decoration: none;
+    height: 40px;
+    padding: 5px 5px 8px 5px;
+    background: rgb(143, 165, 172);
+    border: rgba(128, 128, 128, 0.555) 1px solid;
+
+}
+
+.frame .total-container .back-box a{
+color:black;
+}
+
+.frame .total-container .back-box:hover{
+    background: rgb(88, 84, 84);
+    color: blanchedalmond;
+}
+
+.frame .total-container .image-box{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    overflow: hidden;
+}
+
+
+
+.frame .total-container .detail-box{
+    width: 100%;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    align-self:flex-start;
+}
+
+.frame .total-container .detail-box .head-det{
+    text-align: center;
+    padding: 10px;
+    background: blue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.frame .total-container .detail-box .detail-box-inside{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items:center;
+
+    
+}
+
+.frame .total-container .detail-box .detail-box-inside >div{
+    width: 100%;
+    /* border: black solid 1px; */
+    padding: 40px  20px;
+    align-self: center;
+
+
+}
+
+#edit-btn{
+    justify-self: center;
+   text-align: center;
+
+}
+
+#edit-btn a{
+    color: black !important;
+    font-size: 1rem;
+}

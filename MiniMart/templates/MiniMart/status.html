@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/status.css' %}">
+
+
+<div style="background: rgba(36, 37, 38, 0.2) ;" class="card">
+    <!-- <div style="margin: 60px;" class="card-body bg-light"> -->
+        <div class="containerr">
+            <div class="first3">
+                <div class="box1">ORDER<h1 class="head1">{{total_orders}}</h1></div>
+                <div class="box2">DELIVERED<h1 class="head2">{{delivered}}</h1></div>
+                <div class="box3">PENDING<h1 class="head3">{{pending}}</h1></div>    
+            </div>
+        <!-- </div> -->
+    </div>
+</div>

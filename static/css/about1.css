@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+
+.last2{
+    display: grid;
+    padding: 40px 20px;
+    grid-gap: 20px;
+    width: 100%;
+    background-color:  rgba(36, 37, 38, 0.2);
+}
+    
+
+@media screen and (min-width: 768px) {
+    .last2{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 960px) {
+    .last2{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.last2 .box5, .box6{
+color: rgb(2, 2, 2);
+ 
+   box-shadow: rgba(36, 37, 38, 0.5) 0px 6px 15px 0px;
+   border-radius: 10px; 
+   font-size: 1rem;
+   text-align:start;
+   background:white;
+   padding: 10px;
+
+ 
+}
+
+.box6{
+    width: 200%;
+}
+.details {
+    text-align: center;
+    background: rgba(16, 16, 221, 0.87);
+    margin: 0 10px ;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+      /* font-family: 'Goblin One', cursive; */
+   color: rgb(252, 245, 245);
+
+}
+table{
+    text-align: center;
+    width: 100%;
+    border-spacing: 10px;
+    
+ 
+}
+
+.ord-create a{
+    color: black;
+}
+
+.ord-create{
+    text-align: center;
+    margin: 10px 0;
+    padding: 7px 20px;
+
+    background-color: chartreuse;
+    border-radius: 10px;
+    border: green solid 1px;
+    font-weight:600;
+}
+
+table .tab-border th{
+    background: rgba(16, 16, 221, 0.87);
+    padding: 10px 7px;
+}
+
+table td{
+    padding: 7px;
+    margin-top: 2px;
+}
+
+.tab-head4{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+
+}
+
+.tab-head1{
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px;
+}
+
+.last2 .box5 div{
+    padding: 20px 10px;
+}
+
+
+
+.update-del{
+    display: grid;
+    background: white;
+   box-shadow: rgba(36, 37, 38, 0.5) 0px 6px 15px 0px;
+   border-radius: 10px;
+   align-items: center;
+
+
+}
+
+.update-del .update , .delete{
+    text-align: center;
+    background: rgba(16, 16, 221, 0.87);
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* margin: 45px 20px; */
+    border: green solid 1px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 0 10px;
+    
+}
